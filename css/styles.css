@@ -1,0 +1,658 @@
+/* Global styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f0f0f0;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+
+/* Header styles */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #333;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+}
+
+.nav {
+  background-color: #333;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  width: 100%;
+}
+
+.nav-link {
+  color: #fff;
+  text-decoration: none;
+}
+
+.nav-link:hover {
+  color: #ccc;
+}
+
+/* Carrousel */
+.carousel-container {
+  position: relative;
+  overflow: hidden;
+  margin-top: 70px;
+  border-bottom: 30px solid #000;
+  max-width: 100%;
+}
+
+.carousel {
+  display: flex;
+  flex-wrap: nowrap; /* Add this line */
+  width: 100%;
+  height: 500px;
+  max-width: 100%; /* Ancho del 100% del dispositivo */
+  margin: 0 auto;
+}
+
+.carousel-item {
+  display: flex; /* Add this line */
+  width: 100%;
+  height: 100%;
+  transition: transform 0.5s ease-in-out;
+  flex: 0 0 100%;
+}
+
+.carousel-item img {
+  width: 100%; /* make sure the image takes full width */
+  height: 100%; /* make sure the image takes full height */
+  object-fit: cover /* add this line to make the image cover the entire container */
+}
+
+.carousel-controls {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
+  width: 100%;
+  display: flex;
+  justify-content: space-between; /* Add this line */
+}
+.prev-btn {
+  left: 0; /* Add this line */
+  margin-left: 20px; /* Add this line */
+}
+
+.next-btn {
+  right: 0; /* Add this line */
+  margin-right: 20px; /* Add this line */
+}
+
+.prev-btn, .next-btn {
+  background-color: transparent; /* Add this line */
+  border: none; /* Add this line */
+  padding: 10px; /* Add this line */
+  font-size: 24px; /* Add this line */
+  cursor: pointer; /* Add this line */
+}
+
+.prev-btn:hover, .next-btn:hover {
+  background-color: #ccc; /* Add this line */
+}
+/* Logo styles */
+.logo-section {
+  background: linear-gradient(90deg, rgba(84, 37, 212, 1) 18%, rgba(182, 85, 205, 1) 52%);
+  text-align: center;
+  border-bottom: 20px solid #000;
+  border-top: 5px solid #000;
+}
+
+.logo {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  object-fit: contain;
+}
+
+/* Main styles */
+.main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 2em;
+  margin-bottom: 100px;
+}
+
+.fas {
+  font-size: 24px;
+  color: #fff9;
+}
+
+.phone-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title {
+  margin-bottom: 30px;
+}
+
+.phone-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.phone-grid-wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+.phone-item {
+  margin: 10px;
+  padding: 10px;
+  border: 5px solid #ddd;
+  border-radius: 10px;
+}
+
+.phone-item img {
+  width: 100%;
+  height: 250px;
+  border-radius: 10px 10px 10px 10px;
+  object-fit: cover; /* Add this to make images responsive */
+}
+
+
+.phone-item img {
+  width: 100%;
+  height: 250px;
+  border-radius: 10px 10px 0 0;
+}
+
+.phone-name {
+  font-size: 18px;
+  margin-top: 0;
+  text-align: center;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.phone-price {
+  font-size: 16px;
+  color: #666;
+  text-align: center;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.phone-hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  transform: scale(1.1);
+}
+
+.see-more {
+  margin-top: 40px; /* Add some separation between articles and button */
+  text-align: center;
+}
+
+.btn-more {
+  padding: 20px 40px;
+  text-align: center;
+  background-color: #87CEEB;
+  border: none;
+  border-radius: 10px;
+  font-weight: 500;
+  font-style: normal;
+  color: #f9f9f9;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.btn-more:hover {
+    background-color: #66CCCC; /* Color celeste oscuro para el estado de hover */
+  
+}
+.button-container {
+  text-align: center;
+  margin-top: 40px;
+}
+.details-container {
+  margin-top: 10px; /* Agregamos un poco de espacio entre el precio y el botón */
+  text-align: center; /* Centramos el botón */
+}
+.btn-details {
+  display: block; /* Hacemos que el botón sea un bloque para centrarlo */
+  margin: 0 auto; /* Centramos el botón */
+  padding: 15px 30px;
+  background-color: #87CEEB; /* Color celeste */
+  border: none;
+  border-radius: 10px;
+  font-weight: 500;
+  font-style: normal;
+  color: #f9f9f9;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  cursor: pointer;
+  text-decoration: none;
+}
+.btn-details:hover {
+  background-color: #66CCCC; /* Color celeste oscuro para el estado de hover */
+}
+
+.sidebar {
+  flex-basis: 30%;
+  padding: 1em;
+}
+
+.deal-item {
+  margin-bottom: 1em;
+  padding: 1em;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+}
+
+.deal-image {
+  width: 50px;
+  height: 50px;
+  margin: 10px;
+}
+
+.deal-name {
+  font-size: 16px;
+  margin-top: 0;
+}
+
+.deal-price {
+  font-size: 14px;
+  color: #666;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+/* Search styles */
+.search-container {
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+}
+
+.search-toggle {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.search-toggle i {
+  color: #666;
+}
+
+  /* Footer styles */
+  .wrapper {
+      min-height: 100vh; /* Asegura que el wrapper ocupe todo el espacio disponible */
+      margin-bottom: 50px; /* Deja espacio para el footer */
+      box-sizing: border-box; /* Asegura que el padding se incluya en el ancho del wrapper */
+    }
+    
+    .footer {
+        background-color: #333;
+        color: #fff;
+        padding: 1em;
+        text-align: center;
+        clear: both;
+        position: relative;
+        width: 100%;
+        min-height: 80px; /* Agregamos una altura mínima al footer */
+    }
+    
+/* Formulario */
+.search-container {
+  position: relative;
+}
+
+.search-toggle {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  text-decoration: none; /* Remove underline */
+}
+
+.search-toggle i {
+  color: #666;
+}
+
+#search-input {
+  width: 0;
+  max-width: 150px;
+  padding: 5px;
+  border-radius: 3%;
+  display: inline-block;
+  overflow: hidden;
+  visibility: hidden;
+  transition: width 0.5s, visibility 0.5s; 
+}
+.search-toggle:focus + #search-input {
+  width: 150px;
+  visibility: visible; 
+}
+.search-container.active #search-input {
+  display: block; 
+}
+/* contact-us */
+.mapa-texto {
+  padding: 50px 0;
+  text-align: center;
+}
+
+.map-container {
+  width: 100%;
+  height: 400px;
+  border: 1px solid #333;
+}
+
+.mapa-texto .col-md-6 {
+  padding: 20px;
+}
+
+.mapa-contenedor {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.mapa-texto ul {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.mapa-texto p {
+  font-size: 16px;
+  color: #666;
+}
+
+
+/* About Us */
+.about-us {
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), transparent) !important;
+  padding: 20px ;
+  margin-top: 90px;
+}
+
+.container {
+  display: flex ;
+  align-items: center ;
+  background-color: #f0f0f0 ;
+  padding: 4em ;
+}
+
+.logo2 {
+  width: 400px ;
+  margin-left: 50px;
+}
+
+.content {
+  flex: 1 ;
+}
+
+.content h2 {
+  color: #333 ;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+ .content p {
+  color: #333 !important;
+  font-size: large;
+  font-weight: 500;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+}
+
+/* agents */
+.agents {
+  padding: 2rem 0;
+  margin: auto;
+  margin-top: 5rem;
+  background-image: #9f9f99;
+  background-color: #f0f0f0;
+}
+.agents h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.container-agents {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.agent {
+  width: calc(15% - 20px);
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  padding: 20px;
+  transition: transform 0.3s;
+}
+.agent-hover {
+  transform: scale(1.1);
+  z-index: 1;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.agent img {
+  width: 100%;
+  height: 150px;
+  object-fit: contain;
+  background-color: #fff;
+  margin-bottom: 10px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.agent-name {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.agent-position {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+/* Contact Form */
+.form-about-us {
+  background-color: #f0f0f0;
+  padding: 20px;
+  border-top: 1px solid #ddd;
+  border-left: 1px solid #ddd;
+  border-right: 1px solid #ddd;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.form {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.input-field {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  font-family: Arial, sans-serif;
+}
+
+.textarea {
+  height: 100px;
+  resize: none;
+}
+
+.btn-submit {
+  background-color: #4CAF50;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  font-family: Arial, sans-serif;
+  display: block;
+  margin: 0 auto;
+}
+
+.btn-container {
+  display: flex;
+  justify-content: center;
+}
+
+.btn-submit:hover {
+  background-color: #3e8e41;
+}
+
+/* Products */
+.sidebar {
+  width: 250px; /* ancho de la sidebar */
+  position: fixed; /* fija la sidebar a la izquierda */
+  top: 80px;
+  left: 0;
+  height: 100vh; /* altura del contenido principal */
+  background-color: #f2f2f2;
+  margin-top: auto;
+  padding-top: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+
+.filter-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.filter-option {
+  margin: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.filter-option input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  margin: 0 10px;
+}
+
+.filter-option label {
+  font-size: 16px;
+  margin-left: 10px;
+  font-weight: 500;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.filter-option input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  margin: 0 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
+}
+
+.filter-option input[type="checkbox"]:checked {
+  background-color: #666;
+  border-color: #666;
+}
+
+/* responsive */
+
+/* Tablet */
+@media (max-width: 768px) {
+  .logo2 {
+    width: 300px;
+    margin-left: 20px;
+  }
+  .agent {
+    width: calc(33.33% - 20px);
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .logo2 {
+    width: 200px;
+    margin-left: 10px;
+  }
+  .agent {
+    width: calc(50% - 20px);
+  }
+  .container-agents {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 600px) { /* ajusta el ancho según sea necesario */
+  .phone-grid, .phone-grid-wrapper {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+      
+@media (max-width: 768px) {
+  .phone-grid-wrapper {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .see-more {
+    margin-top: 20px; /* Adjust separation on smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .phone-grid-wrapper {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .phone-item {
+    margin: 10px;
+  }
+  .see-more {
+    margin-top: 10px; /* Adjust separation on smallest screens */
+  }
+}
+@media only screen and (max-width: 768px) {
+  .carousel {
+    height: 300px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .carousel {
+    height: 200px;
+  }
+}
+
