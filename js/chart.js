@@ -77,6 +77,10 @@ document.querySelectorAll('.btn-details').forEach((btn) => {
     // Agregar el artículo al array del carrito
     carrito.push(articuloCarrito);
 
+    // Incrementar la cuenta del carrito
+    cuentaCarrito++;
+    botonCarrito.querySelector('.cart-count').textContent = cuentaCarrito;
+
     // Guardar el carrito en localStorage
     const carritoString = JSON.stringify(carrito);
     localStorage.setItem('carrito', carritoString);
@@ -109,9 +113,8 @@ document.querySelectorAll('.btn-details').forEach((btn) => {
 
       // Decrementar la cuenta del carrito
       cuentaCarrito--;
-
-      // Actualizar la cuenta del carrito en la pantalla
       botonCarrito.querySelector('.cart-count').textContent = cuentaCarrito;
     });
   });
 });
+
