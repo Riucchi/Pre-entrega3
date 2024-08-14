@@ -1,0 +1,113 @@
+
+  /* Footer styles */
+  .wrapper {
+    min-height: 100vh; /* Asegura que el wrapper ocupe todo el espacio disponible */
+    margin-bottom: 50px; /* Deja espacio para el footer */
+    box-sizing: border-box; /* Asegura que el padding se incluya en el ancho del wrapper */
+  }
+  
+  .footer {
+      background-color: #333;
+      color: #fff;
+      padding: 1em;
+      text-align: center;
+      clear: both;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      min-height: 80px; /* Agregamos una altura mínima al footer */
+  }
+  
+/* Carrito */
+
+.cart-btn {
+    position: fixed;
+    bottom: 100px;
+    right: 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    z-index: 1000; /* Agrega un valor alto de z-index */
+  }
+
+.cart-btn:hover {
+  background-color: #444;
+}
+  
+  .cart-count {
+    font-size: 14px;
+    margin-left: 10px;
+  }
+  
+  .cart-container {
+    position: absolute;
+    top: 40%;
+    right: 0;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 10px;
+    width: 300px;
+    display: none;
+  }
+  
+  .cart-container.show {
+    display: block;
+  }
+  
+  .cart-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .cart-list li {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .cart-list li:last-child {
+    border-bottom: none;
+  }
+  
+  .cart-list li img {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+  }
+  
+  .cart-list li span {
+    font-size: 14px;
+  }
+  
+  .cart-list li .btn-remove {
+    background-color: #f44336;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    font-size: 14px;
+    cursor: pointer;
+  }
+  
+  .cart-list li .btn-minus, .cart-list li .btn-plus {
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    font-size: 14px;
+    cursor: pointer;
+  }
+  
+  .cart-count {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: #f44336;
+    color: #fff;
+    padding: 5px 10px;
+    font-size: 14px;
+    border-radius: 50%;
+  }

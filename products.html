@@ -7,6 +7,7 @@
     <!-- CSS STYLESHEET-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/chart.css">
     <link rel="stylesheet" href="css/responsive.css">
     <title>Our Products | CeluMundo</title>
 </head>
@@ -29,28 +30,23 @@
         <div class="row">
           <div class="sidebar">
             <h2>Filtrar por:</h2>
-            <div class="filter-container">
-              <div class="filter-option">
-                <input type="checkbox" id="all-products" name="filter">
-                <label for="all-products">Todos los productos</label>
+            <form id="filter-form">
+              <div class="filter-container">
+                <div class="filter-option">
+                  <input type="radio" id="all-products" name="filter" checked>
+                  <label for="all-products">Todos los productos</label>
+                </div>
+                <div class="filter-option">
+                  <input type="radio" id="price-asc" name="filter">
+                  <label for="price-asc">Price (Higher)</label>
+                </div>
+                <div class="filter-option">
+                  <input type="radio" id="price-desc" name="filter">
+                  <label for="price-desc">Price (Lower)</label>
+                </div>
               </div>
-              <div class="filter-option">
-                <input type="checkbox" id="price-asc" name="filter">
-                <label for="price-asc">Price (Higher)</label>
-              </div>
-              <div class="filter-option">
-                <input type="checkbox" id="price-desc" name="filter">
-                <label for="price-desc">Price (Lower)</label>
-              </div>
-              <div class="filter-option">
-                <input type="checkbox" id="newest" name="filter">
-                <label for="newest">Newer</label>
-              </div>
-              <div class="filter-option">
-                <input type="checkbox" id="oldest" name="filter">
-                <label for="oldest">Lastest</label>
-              </div>
-            </div>
+              <button type="submit">Filtrar</button>
+            </form>
           </div>
         <div class="phone-list">
           <h1 class="title">Our Newest Phones!</h1>
@@ -60,31 +56,31 @@
                 <h2 class="phone-name">Phone 1</h2>
                 <p class="phone-price">Price: $500</p>
                 <div class="details-container">
-                  <a href="detalle_producto1.html" class="btn-details">Details</a>
+                  <button class="btn-details">Add to Cart</button>
                 </div>
               </div>
               <div class="phone-item">
                 <img src="img/phone2.jpg" alt="Phone 2" class="phone-image">
                 <h2 class="phone-name">Phone 2</h2>
-                <p class="phone-price">Price: $300</p>
+                <p class="phone-price">Price: $200</p>
                 <div class="details-container">
-                  <a href="detalle_producto1.html" class="btn-details">Details</a>
+                  <button class="btn-details">Add to Cart</button>
                 </div>
               </div>
               <div class="phone-item">
                 <img src="img/phone2.jpg" alt="Phone 2" class="phone-image">
                 <h2 class="phone-name">Phone 3</h2>
-                <p class="phone-price">Price: $300</p>
+                <p class="phone-price">Price: $100</p>
                 <div class="details-container">
-                  <a href="detalle_producto1.html" class="btn-details">Details</a>
+                  <button class="btn-details">Add to Cart</button>
                 </div>
               </div>
               <div class="phone-item">
                 <img src="img/phone2.jpg" alt="Phone 2" class="phone-image">
                 <h2 class="phone-name">Phone 4</h2>
-                <p class="phone-price">Price: $300</p>
+                <p class="phone-price">Price: $400</p>
                 <div class="details-container">
-                  <a href="detalle_producto1.html" class="btn-details">Details</a>
+                  <button class="btn-details">Add to Cart</button>
                 </div>
               </div>
               <div class="phone-item">
@@ -92,15 +88,15 @@
                 <h2 class="phone-name">Phone 5</h2>
                 <p class="phone-price">Price: $300</p>
                 <div class="details-container">
-                  <a href="detalle_producto1.html" class="btn-details">Details</a>
+                  <button class="btn-details">Add to Cart</button>
                 </div>
               </div>
               <div class="phone-item">
                 <img src="img/phone2.jpg" alt="Phone 2" class="phone-image">
                 <h2 class="phone-name">Phone 6</h2>
-                <p class="phone-price">Price: $300</p>
+                <p class="phone-price">Price: $700</p>
                 <div class="details-container">
-                  <a href="detalle_producto1.html" class="btn-details">Details</a>
+                  <button class="btn-details">Add to Cart</button>
                 </div>
               </div>
             </div>
@@ -109,10 +105,24 @@
           </div>
         </div>
       </main>
+            <!-- Cart button -->
+            <button class="cart-btn">
+              <i class="fas fa-shopping-cart" aria-hidden="true"></i>
+              <span class="cart-count">0</span>
+            </button>
+            <!-- Cart container -->
+            <div class="cart-container">
+              <h2>Shopping Cart</h2>
+              <ul class="cart-list">
+                <!-- Cart items will be displayed here -->
+              </ul>
+              <button class="btn-checkout">Checkout</button>
+            </div>
       <footer class="footer">
         <p>&copy; 2024 MundoCelular</p>
       </footer>
       <script src="js/main.js"></script>
-      <script src="js/script.js"></script>
+      <script src="js/filter.js"></script>
+      <script src="js/chart.js"></script>
     </body>
 </html>

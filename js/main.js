@@ -3,6 +3,7 @@ const searchInput = document.querySelector('#search-input');
 const agents = document.querySelectorAll('.agent');
 const phones = document.querySelectorAll('.phone-item');
 const sidebar = document.querySelector('.sidebar');
+const sidebarToggle = document.querySelector('.sidebar-toggle');
 
 
 searchToggle.addEventListener('click', () => {
@@ -10,18 +11,7 @@ searchToggle.addEventListener('click', () => {
 });
 
 
-function initMap() {
-  var mapa = document.getElementById('mapa');
-  var latLng = { lat: 40.4168, lng: -3.7038 };
-  var opciones = {
-    center: latLng,
-    zoom: 12,
-    mapTypeId: google.maps.MapTypeId.ROADMAP
-  };
-  var mapaGoogle = new google.maps.Map(mapa, opciones);
-}
 
-window.onload = initMap;
 
 
 agents.forEach(agent => {
