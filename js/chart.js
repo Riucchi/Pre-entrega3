@@ -46,6 +46,9 @@ if (carritoString) {
 
       // Actualizar la cuenta del carrito en la pantalla
       botonCarrito.querySelector('.cart-count').textContent = cuentaCarrito;
+
+      // Actualizar el total del carrito
+      calcularTotalCarrito();
     });
   });
 }
@@ -108,13 +111,29 @@ document.querySelectorAll('.btn-details').forEach((btn) => {
       const carritoString = JSON.stringify(carrito);
       localStorage.setItem('carrito', carritoString);
 
+
       // Eliminar el elemento del carrito de la lista del carrito
       articuloCarrito.elementoCarrito.remove();
 
       // Decrementar la cuenta del carrito
       cuentaCarrito--;
+
+      // Actualizar la cuenta del carrito en la pantalla
       botonCarrito.querySelector('.cart-count').textContent = cuentaCarrito;
+
+      // Actualizar el total del carrito
+      calcularTotalCarrito();
     });
+
+    // Actualizar el total del carrito
+    calcularTotalCarrito();
   });
 });
-
+function calcularTotalCarrito() {
+  let total = 0;
+  carrito.forEach((articulo) => {
+    const precio = parseFloat(articulo.precio.replace(/[^0-9.]/g, '')); // Elimina cualquier caracter no numérico y convierte a número
+    total += precio;
+  });
+  document.querySelector('.cart-total').textContent = `Total: $${total.toFixed(2)}`;
+}
