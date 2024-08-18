@@ -52,7 +52,6 @@ function crearArticulos() {
     phoneImage.alt = articulo.nombre;
     phoneImage.classList.add("phone-image");
 
-    // Agregamos los eventos de mouseover y mouseout
     phoneImage.addEventListener('mouseover', () => {
       phoneItem.classList.add('phone-hover');
     });
