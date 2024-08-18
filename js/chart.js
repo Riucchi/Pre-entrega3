@@ -52,6 +52,15 @@ function crearArticulos() {
     phoneImage.alt = articulo.nombre;
     phoneImage.classList.add("phone-image");
 
+    // Agregamos los eventos de mouseover y mouseout
+    phoneImage.addEventListener('mouseover', () => {
+      phoneItem.classList.add('phone-hover');
+    });
+
+    phoneImage.addEventListener('mouseout', () => {
+      phoneItem.classList.remove('phone-hover');
+    });
+
     const phoneName = document.createElement("h2");
     phoneName.textContent = articulo.nombre;
     phoneName.classList.add("phone-name");
@@ -75,7 +84,8 @@ function crearArticulos() {
 
     phoneGrid.appendChild(phoneItem);
   });
-}
+};
+
 
 
 crearArticulos();
