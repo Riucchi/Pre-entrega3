@@ -1,0 +1,44 @@
+[
+    {
+      "id": 1,
+      "nombre": "Samsung Galaxy S22 128GB",
+      "precio": 500,
+      "imagen": "img/phone1.jpg",
+      "descripcion":"Telefono Galaxy S22 con 128 GB de almacenamiento y 8GB de ram. la gama entrante de la serie S22, no te defraudara."
+    },
+    {
+      "id": 2,
+      "nombre": "Motorola G22 64GB",
+      "precio": 200,
+      "imagen": "img/phone2.jpg",
+      "descripcion":"Telefono Motorola G22 64GB de almacenamiento y 4GB de ram. Una excelente opción precio-calidad"
+    },
+    {
+      "id": 3,
+      "nombre": "Motorola G32 128GB",
+      "precio": 300,
+      "imagen": "https://images.fravega.com/f500/cdc761d6c867405f901e68aa89f4f4cc.jpg",
+      "descripcion":"Telefono Motorola G32 128GB de almacenamiento y 6GB de ram. Muy buen telefono precio-calidad, caracteristica propia de MOTOROLA"
+    },
+    {
+      "id": 4,
+      "nombre": "Samsung Galaxy A54 256GB",
+      "precio": 400,
+      "imagen": "https://img.global.news.samsung.com/latin/wp-content/uploads/2023/03/dl9_Galaxy-A34-5G_Awesome-Violet_Front-e1680727963881.jpg",
+      "descripcion":"Telefono Samsung Galaxy A54 256GB de almacenamiento y 8GB de ram, un celular de gama intermedia-alta que no te dejara disconforme!."
+    },
+    {
+      "id": 5,
+      "nombre": "Samsung Galaxy S24 Ultra 512GB",
+      "precio": 700,
+      "imagen": "https://www.cordobadigital.net/wp-content/uploads/2024/01/S24-Ultra-Grey.jpg",
+      "descripcion":"Telefono Samsung Galaxy S24 Ultra 512GB de almacenamiento y 12GB de ram. Lo mejor de la gama alta de SAMSUNG"
+    },
+    {
+      "id": 6,
+      "nombre": "Samsung Galaxy A15 32GB",
+      "precio": 150,
+      "imagen": "https://images.fravega.com/f500/fab008becfc6915dae142d5e48a6fc34.jpg",
+      "descripcion":"Telefono de gama baja, Samsung Galaxy A15 32GB de almacenamiento y 4GB de ram."
+    }
+  ]

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="icono.ico" type="image/x-icon">
+    <!-- CSS STYLESHEET-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <link rel="stylesheet" href="css/product-details.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/chart.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <title>Product Details | CeluMundo</title>
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="about-us.html" class="nav-link">About Us</a>
+            <a href="products.html" class="nav-link">Our Products</a>
+            <a href="contact-us.html" class="nav-link">Contact Us</a>
+            <div class="search-container">
+              <button class="search-toggle">
+                <i class="fas fa-search" aria-hidden="true"></i>
+              </button>
+              <input type="text" id="search-input" placeholder="Search...">
+            </div>
+        </nav>
+      </header>
+      <main class="main">
+        <div class="product-details-container">
+          <div class="product-image">
+            <img src="" alt="" id="product-image">
+          </div>
+          <div class="product-info">
+            <h1 id="product-name"></h1>
+            <p id="product-description"></p>
+            <p id="product-price">Precio: USD $<span id="product-price-value"></span></p>
+          </div>
+        </div>
+      </main>
+            <!-- Cart button -->
+            <button class="cart-btn">
+                <i class="fas fa-shopping-cart" aria-hidden="true"></i>
+                <span class="cart-count">0</span>
+              </button>
+              <div class="cart-container">
+                <ul class="cart-list">
+                </ul>
+                <div class="checkout-container">
+                  <p class="cart-total">Total: USD $0</p>
+                  <button class="btn-checkout">
+                    <a href="checkout.html">Checkout</a>
+                  </button>
+                </div>
+              </div>
+              <footer class="footer">
+                <p>&copy; 2024 MundoCelular</p>
+              </footer>
+      <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+      <script src="js/product-details.js"></script>
+      <script src="js/chart.js"></script>
+    </body>
+</html>

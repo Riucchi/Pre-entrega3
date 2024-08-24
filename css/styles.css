@@ -245,9 +245,9 @@ body {
 
   /* Footer styles */
   .wrapper {
-      min-height: 100vh; /* Asegura que el wrapper ocupe todo el espacio disponible */
-      margin-bottom: 50px; /* Deja espacio para el footer */
-      box-sizing: border-box; /* Asegura que el padding se incluya en el ancho del wrapper */
+      min-height: 100vh;
+      margin-bottom: 50px; 
+      box-sizing: border-box; 
     }
     
     .footer {
@@ -260,7 +260,7 @@ body {
         bottom: 0;
         left: 0;
         width: 100%;
-        min-height: 80px; /* Agregamos una altura mínima al footer */
+        min-height: 80px; 
     }
     
 /* Formulario */
