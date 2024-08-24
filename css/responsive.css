@@ -11,56 +11,89 @@
     }
   }
   
-  /* Mobile */
-  @media (max-width: 480px) {
-    .logo2 {
-      width: 200px;
-      margin-left: 10px;
-    }
-    .agent {
-      width: calc(50% - 20px);
-    }
-    .container-agents {
-      flex-direction: column;
-    }
+ /* Mobile */
+@media (max-width: 480px) {
+  .logo2 {
+    width: 200px;
+    margin-left: 10px;
+  }
+  .agent {
+    width: calc(50% - 20px);
+  }
+  .container-agents {
+    flex-direction: column;
+  }
+  .phone-grid, .phone-grid-wrapper {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .phone-item {
+    margin: 10px;
+  }
+  .see-more {
+    margin-top: 10px; /* Adjust separation on smallest screens */
+  }
+  .carousel {
+    height: 200px;
+  }
+  .cart-btn {
+    position: fixed;
+    top: 50%;
+    z-index: 1;
+  }
+  .cart-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%; /* ajusta el ancho del carrito */
+    height: auto;
+    background-color: #fff;
+    padding: 20px;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    display: none;
+    flex-direction: column;
+  }
+  .cart-container.open {
+    transform: translateX(0);
+    display: none;
+  }
+  .sidebar {
+    display: none; /* Ocultar sidebar en móviles */
+  }
+}
+@media (max-width: 480px) {
+  .cart-list li .btn-remove {
+    background-color: #e74c3c; 
+    color: #fff; 
+    border: none; 
+    padding: 5px; 
+    font-size: 13px;
+    cursor: pointer; 
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); 
+    transition: background-color 0.3s ease;
   }
   
-  @media (max-width: 600px) { /* ajusta el ancho según sea necesario */
-    .phone-grid, .phone-grid-wrapper {
-      grid-template-columns: repeat(1, 1fr);
-    }
+  .cart-list li .btn-remove:hover {
+    background-color: #c0392b; 
   }
-        
-  @media (max-width: 768px) {
-    .phone-grid-wrapper {
-      grid-template-columns: repeat(2, 1fr);
-    }
-    .see-more {
-      margin-top: 20px; /* Adjust separation on smaller screens */
-    }
-  }
-  
-  @media (max-width: 480px) {
-    .phone-grid-wrapper {
-      grid-template-columns: repeat(1, 1fr);
-    }
-    .phone-item {
-      margin: 10px;
-    }
-    .see-more {
-      margin-top: 10px; /* Adjust separation on smallest screens */
-    }
-  }
-  @media only screen and (max-width: 768px) {
-    .carousel {
-      height: 300px;
-    }
-  }
-  
-  @media only screen and (max-width: 480px) {
-    .carousel {
-      height: 200px;
-    }
+  .cart-list li span {
+    font-size: 13px;
+    margin-right: 1rem; 
   }
   
   
+  .cart-list li .btn-remove:active {
+    background-color: #e74c3c; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+  }
+
+  .cart-list li img {
+    width: 50px;
+    height: 50px;
+    margin-right: 1rem;
+    border-radius: 5px; 
+  }
+}
