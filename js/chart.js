@@ -1,3 +1,100 @@
+
+function crearArticulo(articulo) {
+  const phoneItem = document.createElement("div");
+  phoneItem.classList.add("phone-item");
+
+  const phoneImage = crearImagenArticulo(articulo);
+  const phoneName = crearNombreArticulo(articulo);
+  const phonePrice = crearPrecioArticulo(articulo);
+  const detailsContainer = crearContenedorDetalles(articulo);
+
+  phoneItem.appendChild(phoneImage);
+  phoneItem.appendChild(phoneName);
+  phoneItem.appendChild(phonePrice);
+  phoneItem.appendChild(detailsContainer);
+
+  return phoneItem;
+};
+
+function crearImagenArticulo(articulo) {
+  const phoneImage = document.createElement("img");
+  phoneImage.src = articulo.imagen;
+  phoneImage.alt = articulo.nombre;
+  phoneImage.classList.add("phone-image");
+
+  phoneImage.addEventListener('mouseover', () => {
+    phoneImage.parentNode.classList.add('phone-hover');
+  });
+
+  phoneImage.addEventListener('mouseout', () => {
+    phoneImage.parentNode.classList.remove('phone-hover');
+  });
+
+  return phoneImage;
+};
+
+
+function crearNombreArticulo(articulo) {
+  const phoneName = document.createElement("h2");
+  phoneName.textContent = articulo.nombre;
+  phoneName.classList.add("phone-name");
+
+  return phoneName;
+};
+
+
+function crearPrecioArticulo(articulo) {
+  const phonePrice = document.createElement("p");
+  phonePrice.textContent = `Precio: USD $${articulo.precio}`;
+  phonePrice.classList.add("phone-price");
+
+  return phonePrice;
+};
+
+
+function crearContenedorDetalles(articulo) {
+  const detailsContainer = document.createElement("div");
+  detailsContainer.classList.add("details-container");
+
+  const btnDetails = crearBotonAgregarAlCarrito(articulo);
+  const btnVerDetalles = crearBotonVerDetalles(articulo);
+
+  detailsContainer.appendChild(btnDetails);
+  detailsContainer.appendChild(btnVerDetalles);
+
+  return detailsContainer;
+};
+
+function crearBotonAgregarAlCarrito(articulo) {
+  const btnDetails = document.createElement("button");
+  btnDetails.textContent = "Agregar al carro";
+  btnDetails.classList.add("btn-details");
+  btnDetails.addEventListener("click", () => {
+    agregarAlCarrito(articulo);
+  });
+
+  return btnDetails;
+};
+
+
+function crearBotonVerDetalles(articulo) {
+  const btnVerDetalles = document.createElement("a");
+  btnVerDetalles.href = `product-details.html?id=${articulo.id}`;
+
+  const buttonVerDetalles = document.createElement("button");
+  buttonVerDetalles.type = "button";
+  buttonVerDetalles.textContent = "Ver detalles";
+  buttonVerDetalles.classList.add("btn-detail");
+
+  buttonVerDetalles.addEventListener("click", () => {
+    window.location.href = `product-details.html?id=${articulo.id}`;
+  });
+
+  btnVerDetalles.appendChild(buttonVerDetalles);
+
+  return btnVerDetalles;
+}
+
 function crearArticulos() {
   fetch('../index.json')
     .then(response => response.json())
@@ -6,66 +103,11 @@ function crearArticulos() {
       phoneGrid.innerHTML = "";
 
       articulos.forEach((articulo) => {
-        const phoneItem = document.createElement("div");
-        phoneItem.classList.add("phone-item");
-
-        const phoneImage = document.createElement("img");
-        phoneImage.src = articulo.imagen;
-        phoneImage.alt = articulo.nombre;
-        phoneImage.classList.add("phone-image");
-
-        phoneImage.addEventListener('mouseover', () => {
-          phoneItem.classList.add('phone-hover');
-        });
-
-        phoneImage.addEventListener('mouseout', () => {
-          phoneItem.classList.remove('phone-hover');
-        });
-
-        const phoneName = document.createElement("h2");
-        phoneName.textContent = articulo.nombre;
-        phoneName.classList.add("phone-name");
-
-        const phonePrice = document.createElement("p");
-        phonePrice.textContent = `Precio: USD $${articulo.precio}`;
-        phonePrice.classList.add("phone-price");
-
-        const detailsContainer = document.createElement("div");
-        detailsContainer.classList.add("details-container");
-
-        const btnDetails = document.createElement("button");
-        btnDetails.textContent = "Agregar al carro";
-        btnDetails.classList.add("btn-details");
-        btnDetails.addEventListener("click", () => {
-          agregarAlCarrito(articulo);
-        });
-
-        const btnVerDetalles = document.createElement("a");
-        btnVerDetalles.href = `product-details.html?id=${articulo.id}`;
-
-        const buttonVerDetalles = document.createElement("button");
-        buttonVerDetalles.type = "button";
-        buttonVerDetalles.textContent = "Ver detalles";
-        buttonVerDetalles.classList.add("btn-detail");
-
-        buttonVerDetalles.addEventListener("click", () => {
-          window.location.href = `product-details.html?id=${articulo.id}`;
-        });
-
-        btnVerDetalles.appendChild(buttonVerDetalles);
-
-        detailsContainer.appendChild(btnDetails);
-        detailsContainer.appendChild(btnVerDetalles);
-        phoneItem.appendChild(phoneImage);
-        phoneItem.appendChild(phoneName);
-        phoneItem.appendChild(phonePrice);
-        phoneItem.appendChild(detailsContainer);
-
+        const phoneItem = crearArticulo(articulo);
         phoneGrid.appendChild(phoneItem);
       });
     });
 }
-
 
 
 crearArticulos();
