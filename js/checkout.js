@@ -11,8 +11,6 @@ carrito.forEach((articulo) => {
       <p class="product-price">USD $${articulo.precio}</p>
     </div>
   `;
-
-  // Si no hay imagen en el local storage, hacemos una petición fetch a index.json
   if (!articulo.imagen) {
     fetch('index.json')
       .then(response => response.json())
@@ -36,17 +34,16 @@ confirmacionTotalValue.textContent = total;
 const btnConfirmarCompra = document.querySelector(".btn-details");
 
 btnConfirmarCompra.addEventListener("click", () => {
-  // Vaciar el carrito
+
   localStorage.removeItem("carrito");
 
-  // Lanzar SweetAlert
+
   Swal.fire({
     title: "Compra realizada con éxito!",
     text: "Gracias por tu compra. Tu pedido será procesado pronto.",
     icon: "success",
     confirmButtonText: "Aceptar"
   }).then(() => {
-    // Redireccionar a products.html
     window.location.href = "products.html";
   });
 });

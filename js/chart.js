@@ -96,7 +96,7 @@ function crearBotonVerDetalles(articulo) {
 }
 
 function crearArticulos() {
-  fetch('../index.json')
+  fetch('index.json')
     .then(response => response.json())
     .then(articulos => {
       const phoneGrid = document.querySelector(".phone-grid");

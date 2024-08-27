@@ -2,7 +2,7 @@ const urlParams = new URLSearchParams(window.location.search);
 const productId = parseInt(urlParams.get('id')); 
 
 function getProductoById(id) {
-  return fetch('../index.json')
+  return fetch('index.json')
     .then(response => response.json())
     .then(articulos => {
       const producto = articulos.find(articulo => articulo.id === id);
