@@ -96,7 +96,7 @@ function crearBotonVerDetalles(articulo) {
 }
 
 function crearArticulos() {
-  fetch('index.json')
+  fetch('https://raw.githubusercontent.com/Riucchi/Pre-entrega3/main/js/index.jsonn')
     .then(response => response.json())
     .then(articulos => {
       const phoneGrid = document.querySelector(".phone-grid");

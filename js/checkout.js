@@ -12,7 +12,7 @@ carrito.forEach((articulo) => {
     </div>
   `;
   if (!articulo.imagen) {
-    fetch('index.json')
+    fetch('https://raw.githubusercontent.com/Riucchi/Pre-entrega3/main/js/index.json')
       .then(response => response.json())
       .then(data => {
         const producto = data.find(producto => producto.id === articulo.id);
