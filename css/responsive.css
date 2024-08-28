@@ -13,6 +13,13 @@
   
  /* Mobile */
 @media (max-width: 480px) {
+  .phone-list {
+    margin-top: 3rem;
+    font-size: 16px;
+  }
+  .title {
+    text-align: center;
+  }
   .logo2 {
     width: 200px;
     margin-left: 10px;
