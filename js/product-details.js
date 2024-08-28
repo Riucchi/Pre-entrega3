@@ -2,7 +2,7 @@ const urlParams = new URLSearchParams(window.location.search);
 const productId = parseInt(urlParams.get('id')); 
 
 function getProductoById(id) {
-  return fetch('index.json')
+  return fetch('https://raw.githubusercontent.com/Riucchi/Pre-entrega3/main/js/index.json')
     .then(response => response.json())
     .then(articulos => {
       const producto = articulos.find(articulo => articulo.id === id);
