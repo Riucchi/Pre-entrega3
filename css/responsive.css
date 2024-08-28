@@ -44,6 +44,7 @@
   }
   .cart-btn {
     position: fixed;
+    padding: 10px;
     top: 50%;
     z-index: 1;
   }
